@@ -23,8 +23,10 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent='Can not find the location,Try different search!.'
             }
             else {
-                messageOne.textContent = 'Country => '+data.sys.country+'  City  =>'  + data.name 
+                messageOne.textContent = 'Country => '+data.sys.country+'  City  =>  '  + data.name +' Feels like =>  '+
+                data.main.feels_like+'  Humidity => ' +data.main.humidity +'  Tem Max =>  '+data.main.temp_max+ ' Temp Min =>  '+data.main.temp_min
                 messageTwo.textContent = data.main.temp
+                console.log(data)
             }
         })
     })
